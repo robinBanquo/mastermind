@@ -47,11 +47,15 @@
   }
   $(document).ready(function () {
       $('.hexa-color').draggable({
-            snap: '.drop'
+          snap: '.drop',
+          snapMode : 'inner',
+          revert: 'invalid'
       });
       $('.drop').droppable({
-          accept: '.hexacolor'
+          accept: '.hexa-color',
+          drop : function () {
 
+          }
       });
   })
 </script>
@@ -60,4 +64,8 @@
     * {
         border: 1px solid darkgrey;
     }
+    .drop, .hexa-color {
+         width: 4em;
+         height: 4em;
+     }
 </style>
