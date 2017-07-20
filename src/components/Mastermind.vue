@@ -49,7 +49,9 @@
       $('.hexa-color').draggable({
           snap: '.drop',
           snapMode : 'inner',
-          revert: 'invalid'
+          snapTolerance: 40,
+          revert: 'invalid',
+          stack: '.drop'
       });
       $('.drop').droppable({
           accept: '.hexa-color',
@@ -61,9 +63,9 @@
 </script>
 <style src="./colors.css"></style>
 <style>
-    * {
-        border: 1px solid darkgrey;
-    }
+    /** {*/
+        /*border: 1px solid darkgrey;*/
+    /*}*/
     .drop, .hexa-color {
          width: 4em;
          height: 4em;
