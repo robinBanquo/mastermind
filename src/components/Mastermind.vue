@@ -1,8 +1,8 @@
-<template>
+<template xmlns="http://www.w3.org/1999/html">
     <div class="fluid-container">
         <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
             <h1>Mastermind</h1>
-            <div class="choice-color row">
+            <div class="choice-color row mmm">
                 <choice-color></choice-color>
             </div>
             <div class="game-container">
@@ -13,7 +13,9 @@
         </div>
     </div>
 </template>
+
 <script>
+
     import ChoiceColor from './ChoiceColor'
     import GameTry from './GameTry'
 
@@ -43,6 +45,15 @@
           GameTry
       }
   }
+  $(document).ready(function () {
+      $('.hexa-color').draggable({
+            snap: '.drop'
+      });
+      $('.drop').droppable({
+          accept: '.hexacolor'
+
+      });
+  })
 </script>
 <style src="./colors.css"></style>
 <style>
