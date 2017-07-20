@@ -1,8 +1,10 @@
 <template>
-    <div class="container">
+    <div class="fluid-container">
         <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
             <h1>Mastermind</h1>
-            <choice-color></choice-color>
+            <div class="choice-color row">
+                <choice-color></choice-color>
+            </div>
             <div class="game-container">
                 <div class="game-try" v-for="n in 10">
                     <game-try></game-try>
@@ -42,3 +44,9 @@
       }
   }
 </script>
+<style src="./colors.css"></style>
+<style>
+    * {
+        border: 1px solid darkgrey;
+    }
+</style>
