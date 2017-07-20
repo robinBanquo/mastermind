@@ -99,6 +99,17 @@ a {
   animation: neonPink 1.5s ease-in-out infinite alternate;
 }
 
+.white a {
+  color: #ffffff;
+  font-family: Monoton;
+  font-size: 2em;
+}
+.white a:hover {
+  -webkit-animation: neonWhite 1.5s ease-in-out infinite alternate;
+  -moz-animation: neonWhite 1.5s ease-in-out infinite alternate;
+  animation: neonWhite 1.5s ease-in-out infinite alternate;
+}
+
 .dark_blue a {
   color: #00008B;
   font-family: Monoton;
@@ -185,6 +196,15 @@ p a:hover {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00008B, 0 0 35px #00008B, 0 0 40px #00008B, 0 0 50px #00008B, 0 0 75px #00008B;
   }
 }
+
+@-webkit-keyframes neonWhite {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFFFFF, 0 0 70px #FFFFFF, 0 0 80px #FFFFFF, 0 0 100px #FFFFFF, 0 0 150px #FFFFFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFFFFF, 0 0 35px #FFFFFF, 0 0 40px #FFFFFF, 0 0 50px #FFFFFF, 0 0 75px #FFFFFF;
+  }
+}
 /*glow for mozilla*/
 
 @-moz-keyframes neonRed {
@@ -258,6 +278,15 @@ p a:hover {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00008B, 0 0 35px #00008B, 0 0 40px #00008B, 0 0 50px #00008B, 0 0 75px #00008B;
   }
 }
+
+@-moz-keyframes neonWhite {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFFFFF, 0 0 70px #FFFFFF, 0 0 80px #FFFFFF, 0 0 100px #FFFFFF, 0 0 150px #FFFFFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFFFFF, 0 0 35px #FFFFFF, 0 0 40px #FFFFFF, 0 0 50px #FFFFFF, 0 0 75px #FFFFFF;
+  }
+}
 /*glow*/
 
 @keyframes neonRed {
@@ -329,6 +358,15 @@ p a:hover {
   }
   to {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #00008B, 0 0 35px #00008B, 0 0 40px #00008B, 0 0 50px #00008B, 0 0 75px #00008B;
+  }
+}
+
+@keyframes neonWhite {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFFFFF, 0 0 70px #FFFFFF, 0 0 80px #FFFFFF, 0 0 100px #FFFFFF, 0 0 150px #FFFFFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFFFFF, 0 0 35px #FFFFFF, 0 0 40px #FFFFFF, 0 0 50px #FFFFFF, 0 0 75px #FFFFFF;
   }
 }
 /*REEEEEEEEEEESPONSIVE*/

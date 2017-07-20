@@ -1,8 +1,10 @@
 <template>
-    <div class="try-container row">
-        <div class="col-xs-10 row">
-            <div class="" v-for=" i in 4">
-
+    <div class="try-container row" style="margin: 0">
+        <div class="col-xs-10 row" style="margin: 0; padding: 0">
+            <div class="col-xs-3 white" v-for=" i in 4" style="text-align: center;padding: 0;margin: 2em 0">
+              <a href="#">
+                <i class="fa fa-eercast" aria-hidden="true"></i>
+              </a>
             </div>
         </div>
         <div class="col-xs-2">
