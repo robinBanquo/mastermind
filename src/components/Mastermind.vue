@@ -3,12 +3,10 @@
         <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
             <h1>Mastermind</h1>
             <div class="choice-color row mmm">
-                <choice-color></choice-color>
+                <choice-color :selectedColor="selectedColor"></choice-color>
             </div>
             <div class="game-container">
-                <div class="game-try" v-for="n in 10">
-                    <game-try></game-try>
-                </div>
+                    <game-try v-for="essai in essaiTable" :essai="essai"></game-try>
             </div>
         </div>
     </div>
@@ -23,9 +21,10 @@
 
       data () {
           return {
-              nb_essai: 10,
+              nbEssais : 10,
               tofind : [],
-              colors : ['light_blue' , 'red' , 'orange' , 'yellow' , 'green' , 'purple' , 'pink', 'dark_blue' ]
+              colors : ['light_blue' , 'red' , 'orange' , 'yellow' , 'green' , 'purple' , 'pink', 'dark_blue' ],
+              selectedColor: ""
           }
       },
       computed: {
@@ -34,10 +33,26 @@
               return shuffle(this.colors)
           },
           toFind () {
-              for(let i=0 ; i<4 ; i++){
-              this.tofind.push(this.colors[i]);
+              for (let i = 0; i < 4; i++) {
+                  this.tofind.push(this.colors[i]);
               }
-             return this.tofind;
+              return this.tofind;
+          },
+          essaiTable (){
+              var essaiTable = [];
+              for (let i = 0; i < this.nbEssais; i++) {
+                  essaiTable.push({
+                      key : i ,
+                      values : ["", "", "", ""],
+                      status : "waiting"
+                      })
+              }
+              essaiTable[0].status="active";
+              return essaiTable
+          },
+      },
+      methods : {
+          essai : function(n) {
           },
       },
       components : {
@@ -45,21 +60,6 @@
           GameTry
       }
   }
-  $(document).ready(function () {
-      $('.hexa-color').draggable({
-          snap: '.drop',
-          snapMode : 'inner',
-          snapTolerance: 40,
-          revert: 'invalid',
-          stack: '.drop'
-      });
-      $('.drop').droppable({
-          accept: '.hexa-color',
-          drop : function () {
-
-          }
-      });
-  })
 </script>
 <style src="./colors.css"></style>
 <style>

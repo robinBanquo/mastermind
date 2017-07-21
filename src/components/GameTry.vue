@@ -16,9 +16,13 @@
 </template>
 <script>
     export default {
+        props : ['essai'],
         data () {
             return{
-                colors : this.$parent.colors
+                colors : this.$parent.colors,
+                response : [],
+
+
             }
         }
     }

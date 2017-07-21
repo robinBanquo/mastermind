@@ -15,6 +15,7 @@
     "shuffle-array": "^1.0.1",
     "vue": "^2.3.3",
     "vue-drag-and-drop": "^2.2.0",
+    "vue-draggable": "^1.0.0-rc.3",
     "vue-router": "^2.6.0"
   },
   "devDependencies": {
